@@ -1,0 +1,1124 @@
+/* Section 1: Web Pages Mobile/Tablate/Desktop view Control */
+/* Mobile Styles */
+@media all and (max-width: 480px) {	
+	#print_date, #navbar_row_1 {
+		display: none;		
+	}
+}
+
+/* Tablate Styles */
+@media only screen and (min-width: 480px) and (max-width: 1115px) {	
+	body, .container-fluid {    
+		margin: 0px 0px 0px 0px !important;
+	}
+	#navbar_row_1 {
+		display: none;		
+	}
+  
+	#mobileview {
+		display: block;
+		left: 110px;
+	}
+ 
+	#print_date{
+		top: .7em;
+	}
+	
+	.navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+}
+
+/* Larger Tablet Styles */
+@media only screen and (min-width: 1115px) and (max-width: 1250px) {
+	body, .container-fluid {    
+		margin: 0px 0px 0px 0px !important;
+	}      
+	
+	#navbar_row_2 {
+		font-size: 12px;	  
+	}
+	
+	#mobileview {
+		display: none;	 
+ }  
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 1250px) {
+	#navbar_row_2 {
+		font-size: 15px;	  
+	}
+	
+	#mobileview {
+		display: none;	
+	}
+}
+/* 1:END */
+
+
+
+/* Section 2: Thin navbar css style code */
+#navbar_time, #navbar_time a {
+	color: white;
+	text-decoration: none;
+}
+
+.navbar_logo_img {
+	box-shadow: 0 2px 6px 1px; 
+	position: absolute; 
+	width:100px; 
+	height: 80px; 
+	left: 0px; 
+	border-radius: 2px;
+}	
+
+#navbar_fa_text > a, #navbar_fa_text div > a {
+	color:white;
+	text-decoration: none; 
+	cursor: pointer;
+}
+
+#navbar_fa_text > b {
+	color: white;	
+}
+
+.dropdown {
+    display: inline-block;		
+}
+
+.dropdown-menu {   
+  font-size: 12px;   
+  background-color: #ffcc00;      
+  min-width: 50px;
+}
+
+.form-content {
+    display: none;    
+    background-color: #ffcc00;
+    width: 360px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+	border-radius: 3px;			
+	padding: 14.9px;	
+	padding-top: 0px;
+}
+/* 2:END */
+
+
+/* Section 3: Thick navbar css style code */
+.thick_navbar_logo_img {	
+	box-shadow: 0 2px 6px 1px; 
+	position: absolute; 
+	width:80px; 
+	height: 60px; 
+	left: 40px; 
+	border-radius: 2px;
+}
+
+/* Navigation Menu Bar */
+#menu {
+    height:45px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;    
+}
+ 
+#menu li .align_right {
+    /* Rounded Corners */
+    -moz-border-radius: 5px 0px 5px 5px;
+    -webkit-border-radius: 5px 0px 5px 5px;
+    border-radius: 5px 0px 5px 5px;
+	
+}
+#menu li:hover .align_right {
+    left:auto;
+    right:-1px;
+    top:auto;	
+}
+
+#menu > li {
+    float:left;
+    text-align:center;
+    position:relative;    
+    margin-right:10px;
+    border:none;
+	top: 2px; 	
+	
+}
+ 
+#menu > li:hover {
+    border: 1px solid #777777;
+    padding: 4px 9px 4px 9px;
+    
+    /* Background color and gradients */     
+    background: #ffffff;
+    
+     
+    /* Rounded corners */     
+    -moz-border-radius: 5px 5px 0px 0px;
+    -webkit-border-radius: 5px 5px 0px 0px;
+    border-radius: 5px 5px 0px 0px;
+}
+ 
+#menu li > a {
+    padding: 11px;
+    font-size:14px;     
+    display:block;
+    outline:0;
+    text-decoration:none; 
+	color: white;
+}
+ 
+#menu > li:hover a {
+    color:black;
+}
+
+/* Drop Down */
+.dropdown_work_menu, 
+.dropdown_weblog_menu, 
+.dropdown_youtube_menu,
+.dropdown_soundcloud_menu,
+.dropdown_akhada_menu,
+.dropdown_photo_menu,
+.dropdown_ps_menu,
+.dropdown_me_menu {    
+    float:left;
+    position:absolute;
+    left:-999em; /* Hides the drop down */
+    text-align:left;
+    padding:10px 20px 10px 20px;	
+    border:1px solid #777777;
+    border-top:none;
+    
+	box-shadow: 0 8px 6px -6px black;
+	
+	
+    /* Gradient background */
+    background:#ffffff;
+    
+ 
+    /* Rounded Corners */
+    -moz-border-radius: 0px 5px 5px 5px;
+    -webkit-border-radius: 0px 5px 5px 5px;
+    border-radius: 0px 5px 5px 5px;
+}
+ 
+ .dropdown_work_menu { width: 750px;}
+ .dropdown_weblog_menu { width: 650px;}
+ .dropdown_youtube_menu { width: 600px;}
+ .dropdown_soundcloud_menu {width: 400px;}
+ .dropdown_akhada_menu {width: 500px;}
+ .dropdown_photo_menu {width: 550px;}
+ .dropdown_ps_menu {width: 700px;}
+ .dropdown_me_menu {width: 160px}
+
+#menu li:hover .dropdown_work_menu, 
+#menu li:hover .dropdown_weblog_menu, 
+#menu li:hover .dropdown_youtube_menu,
+#menu li:hover .dropdown_soundcloud_menu,
+#menu li:hover .dropdown_akhada_menu
+ {
+    left:-1px;
+    top:auto;
+}
+ 
+.dropdown_weblog_menu div a, 
+.dropdown_youtube_menu div a,
+.dropdown_soundcloud_menu div a,
+.dropdown_akhada_menu div a,
+.dropdown_photo_menu div a,
+.dropdown_ps_menu div a,
+.dropdown_me_menu div a {
+	padding-right: 0px; 
+	margin-top:7px;
+    display:inline-block;
+    outline:0;
+    text-decoration:none;    
+	text-align:left;	
+	float: left;
+	clear: both;		
+}
+
+.dropdown_weblog_menu div a:hover,
+.dropdown_youtube_menu div a:hover,
+.dropdown_soundcloud_menu div a:hover,
+.dropdown_akhada_menu div a:hover,
+.dropdown_photo_menu div a:hover,
+.dropdown_ps_menu div a:hover,
+.dropdown_me_menu div a:hover
+ {
+	color: #ffcc00 !important;	
+}
+
+/* Style the tab */
+div.tab {
+    overflow: hidden;    
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;    
+    transition: 0.3s;
+    font-size: 17px;
+ 	margin-right: 57px;
+	padding: 0px;
+	
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {    	
+	border-bottom: 3px solid #ffcc00;		
+	
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {    
+    border-bottom: 3px solid #ffcc00;	
+	
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;    
+    margin: 0px;	
+	margin-top: 6px;
+	
+}
+
+
+
+/* Style the sidetab */
+div.sidetab {
+    float: left;
+    border-right: 1px solid #aaa;    
+    width: 27%;
+	height: 300px;
+    
+}
+
+/* Style the buttons inside the sidetab */
+div.sidetab button {
+	background-color: inherit;
+    display: block;    
+    color: black;    
+    width: 100%;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;    
+    font-size: 17px;
+	padding: 0px;
+}
+
+div.sidetab button:hover {    	
+	font-weight:bold;	
+}
+
+
+
+/* Create an active/current tablink class */
+div.sidetab button.active {    
+    font-weight:bold;
+	
+}
+
+/* Style the sidetab content */
+.sidetabcontent {
+    float: left;
+    padding-left: 15px;
+	margin: 0px;
+    border: none;	
+    width: 73%;
+    border-left: none;
+    height: 300px;
+	display:none;	
+}
+
+
+.weblog_img_shadow {
+	color:#ffcc00; 
+	text-shadow: 1px 1px 1px black; 
+}
+
+.login_button {
+    background-color: #1a1a1a; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	width: 100%;
+	border-radius: 4px;
+}
+
+
+
+
+
+.text-block {  
+  position: relative;
+  
+}
+
+.text-block h4 {
+  background-color: black;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  margin: 0;
+  width: 221px;
+  opacity: 0.7;
+}
+
+
+.text-block:hover h4 {
+	color: #ffcc00;
+	opacity: 0.8;
+	
+}
+
+
+
+
+
+/*Youtube
+
+.video-thumbnail {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  
+}
+  .video-thumbnail:before {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    content: "\f01d";
+    font-family: FontAwesome;
+    font-size: 60px;
+    color: #fff;
+    opacity: .8;
+    text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  .video-thumbnail:hover:before {
+    color: #eee;
+  }
+
+
+
+/*ENd you tube*/
+
+/* End Menu */
+/* --------------------------------------------------------------
+ END Navbar
+-------------------------------------------------------------- */
+
+
+
+
+/* Section 4: Navigation MenuBar Control */
+body {
+    padding-top: 76px; 
+  }
+
+* {box-sizing:border-box}
+
+body {
+	font-family: Verdana,sans-serif;
+	margin:0
+}
+
+/* End of Section 4 */
+
+
+
+
+
+/* --------------------------------------------------------------
+Mobile Tablate View
+-------------------------------------------------------------- */
+@media (max-width: 990px) {
+  .featured-content-posts .entry-content {
+    width: 100% !important;
+    float: none;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .featured-content-posts .post {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .featured-content-posts .post .contnr {
+    padding: 1% 15px;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .featured-content-posts .post .grid-text {
+    padding: 6%;
+  }
+}
+
+@media (max-width: 600px) {
+  .featured-content-posts .post .entry-title {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 600px) {
+  .featured-content-posts .post .entry-excerpt {
+    font-size: 16px;
+  }
+}
+
+
+
+/* --------------------------------------------------------------
+Featured Slides
+-------------------------------------------------------------- */
+
+.featured-content-wrapper {
+  position: relative;
+  z-index: 10;  
+  background: #3b4750;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+}
+
+.featured-content-posts {
+  position: relative;
+  z-index: 20;
+  display: block;
+  width: 100%;
+}
+
+
+.post {
+  width: 100%;
+  margin-bottom: 8%;
+  display: inline-block;
+  position: relative;
+  float: left;
+  opacity: 1; 
+  z-index: 2; 
+  transition: opacity 200ms ease-in-out; 
+}
+
+
+.featured-content-posts .post {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  border-bottom: none;
+  -webkit-animation: none;
+  animation: none;
+  padding-right: 0;
+  margin: 0;
+  z-index: auto !important;
+}
+
+.featured-content-posts .post:not(:first-child) {
+  opacity: 0;
+}
+
+
+.featured-content-posts .post:first-child {
+  position: relative;
+  display: block;
+  float: left;
+}
+
+
+.blur {
+  position: absolute;
+  z-index: -10;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+
+.cover-image {
+  position: absolute;
+  z-index: -999998;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;  
+  margin: 0;
+  padding: 0;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  opacity: .8;
+}
+
+
+.featured-content-posts .post .contnr {
+	padding: 1% 4.5% 2%;		
+}
+
+.featured-content-posts .entry-content {
+  position: relative;
+  z-index: 5;
+  width: 50%;
+}
+
+.content-title {
+  color: #fff;  
+  background: rgba(27, 36, 48, 0.78);
+  padding: 5px 20px;
+  margin-bottom: 5px;
+  height: 50px;  
+  line-height: 40px;
+  width: auto;
+  font-size: 18px;
+  font-weight: 600;
+  width: auto;
+  display: inline-block;
+}
+
+.content-title a {
+  color: #fff;
+}
+
+
+.featured-content-posts .slide-navs {
+  margin-bottom: 5px;
+  display: inline-block;
+  
+}
+
+.featured-content-posts .slide-navs a {
+  display: inline-block;    
+  color: #fff;
+  font-size: 13px;
+  font-size: 0;
+  background: rgba(27, 36, 48, 0.78);
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+}
+
+.rslides1_nav {
+  display: none;
+}
+
+
+.featured-content-posts .slide-navs .sprev:before,
+.featured-content-posts .slide-navs .snext:before {
+  width: 100%;  
+  text-align: center;
+  font-family: 'FontAwesome';
+  display: inline-block;  
+  font-size: 20px;
+}
+.featured-content-posts .slide-navs a:hover {
+  opacity: .8;
+}
+.featured-content-posts .slide-navs .sprev:before {
+  content: "\f104";  
+}
+.featured-content-posts .slide-navs .snext:before {
+  content: "\f105";
+}
+
+
+.grid-text .entry-title a {
+  color: #fff;
+}
+
+.grid-text .entry-excerpt {
+  color: #bac2c9;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+.featured-content-posts .post .grid-text {
+  width: 100%;
+  background: rgba(27, 36, 48, 0.7);
+  padding: 5%;
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+.featured-content-posts .post .entry-title {
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 18px;
+  transition: none;
+}
+
+
+.featured-content-posts .post .entry-title a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.featured-content-posts .post .entry-excerpt {
+  font-size: 18px;
+}
+
+.featured-content-posts .post .entry-excerpt p {
+  margin-bottom: 1.4em;
+}
+.featured-content-posts .post .entry-excerpt a {
+  color: #fff;
+
+}
+
+@-webkit-keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-2%, 0, 0);
+    transform: translate3d(-2%, 0, 0);
+    visibility: visible;
+  } 
+}
+
+/* --------------------------------------------------------------
+End Slides CSS
+-------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =================================== */
+/* Section 5: Slide Information Detail */
+
+.mySlides {
+	display:none
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+
+
+/* Start: Added carousel Code*/
+#myCarousel .nav a small {
+    display:block;
+}
+#myCarousel .nav {
+    background:#eee;
+}
+#myCarousel .nav a {
+    border-radius:0px;
+}
+/* End: Added carousel Code*/
+
+
+
+
+
+/* Start: Added Footer Code*/
+footer{
+   background-color: #ffcc00;    
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 35px;
+    text-align: center;
+    color: #CCC;
+}
+
+
+footer p {	
+	color: black;    
+    padding: 10.5px;
+    margin: 0px;
+    line-height: 100%;
+}
+/* End: Added Footer Code*/
+
+
+/* */
+.slide-text {
+	font-family: Times New Roman, Times, serif;	
+	margin:0;
+	position: absolute;
+	left: 400px; 
+	top: -250px;
+	
+}
+
+/* Youtube*/
+
+  		/*  VIDEO PLAYER CONTAINER
+ 		############################### */
+  		.vid-container {
+		    position: relative;
+		    padding-bottom: 52%;
+		    padding-top: 30px; 
+		    height: 0; 
+		}
+		 
+		.vid-container iframe,
+		.vid-container object,
+		.vid-container embed {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		}
+
+
+		/*  VIDEOS PLAYLIST 
+ 		############################### */
+		.vid-list-container {
+			width: 100%;
+			overflow: hidden;
+			margin-top: 20px;			
+			padding-bottom: 20px;
+		}
+
+		.vid-list {
+			width: 3500px;
+			position: relative;
+			top:0;
+			left: 0;
+		}
+
+		.vid-item {
+			display: block;
+			width: 248px;
+			height: 248px;
+			float: left;
+			margin: 0;
+			padding: 5px;
+			padding-left: 0px;
+		}
+
+		.thumb {
+			position: relative;			
+			height: -10px;
+		}
+
+		.thumb img {
+			width: 100%;
+			position: relative;
+			top: -13px;
+		}
+
+		.vid-item .desc {
+			color: black;
+			font-size: 16px;
+			margin-top:5px;
+		}
+
+		.vid-item .desc:hover {
+			color: #ffcc00;
+		}
+		
+		.vid-item:hover {
+			background: #eee;
+			cursor: pointer;			
+		}
+
+		.arrows {
+			position:relative;
+			width: 100%;
+			
+		}
+
+		.arrow-left {
+			color: #fff;
+			position: absolute;
+			background: #777;
+			padding: 15px;
+			left: 0px;
+			top: -210px;
+			z-index: 99;
+			cursor: pointer;
+		}
+
+		.arrow-right {
+			color: #fff;
+			position: absolute;
+			background: #777;
+			padding: 15px;
+			right: 0px;
+			top: -210px;
+			z-index:100;
+			cursor: pointer;
+		}
+
+		.arrow-left:hover {
+			background: #ffcc00;
+		}
+
+		.arrow-right:hover {
+			background: #ffcc00;
+		}
+
+
+		@media (max-width: 624px) {
+			body {
+				margin: 15px;
+			}
+			.caption {
+				margin-top: 40px;
+			}
+			.vid-list-container {
+				padding-bottom: 20px;
+			}
+
+			/* reposition left/right arrows */
+			.arrows {
+				position:relative;
+				margin: 0 auto;
+				width:96px;
+			}
+			.arrow-left {
+				left: 0;
+				top: -17px;
+			}
+
+			.arrow-right {
+				right: 0;
+				top: -17px;
+			}
+		}
+
+		
+		
+		
+/* Photography images css code */
+
+.size11 {
+	
+	width: 160px;
+	height: 160px;
+}
+
+.size12 {
+	width: 160px;
+	height: 320px;
+}
+
+.size21 {
+	width: 320px;
+	height: 160px;
+}
+
+.size22 {	
+	width: 320px;
+	height: 320px;
+}
+
+.size24 {
+	width: 640px;
+	height: 320px;
+}
+
+
+.freewall_main{background:white;line-height:1.125em;color:white; margin:0 auto; position:relative; border-bottom:1px solid #fff; border-top:1px solid #fff;}
+.brick {background-color:white; float:left; cursor: default; overflow:hidden; background-repeat:no-repeat; background-size:cover; background-position:center;}
+.brick span{cursor:pointer;}
+.brick img{width:100%; height:100%; transition:all 500ms ease; -webkit-transition:all 500ms ease; -ms-transition:all 500ms ease; -o-transition:all 500ms ease; -moz-transition:all 500ms ease;}
+.brick img:hover{transform: scale(1.15,1.15); -webkit-transform: scale(1.15,1.15); -ms-transform: scale(1.15,1.15); -o-transform: scale(1.15,1.15); -moz-transform: scale(1.15,1.15); transition:all 500ms ease; -webkit-transition:all 500ms ease; -ms-transition:all 500ms ease; -o-transition:all 500ms ease; -moz-transition:all 500ms ease;}
+.brick .title{position:absolute; bottom:0; background:rgba(0,0,0,0.6); display:block; width:100%; padding:5px; font-size:13px;}
+
+
+/* End Here Photograpy */
+
+.button {
+    /* background-color: #ffbb33; */
+	background-color: white;
+    border: 2px solid;
+    color: #ffbb33;
+	margin-top: 20px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button:hover {
+	background-color: #ffbb33;
+	color: white;
+}
+
+.myimg {
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+	
+}
+
+.myimg:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+		

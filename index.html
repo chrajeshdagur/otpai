@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Otpai - We Do!</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="images/favicon.ico"/>  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+  <!-- My Files -->
+  <link rel="stylesheet" href="css/otpai.css" type="text/css">     
+  <script type="text/javascript" src="js/otpai.js"></script> 
+  <script type="text/javascript" src="./js/slide_resource1.js"></script>  
+  <script type="text/javascript" src="./firewall/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="./firewall/freewall.js"></script>    
+  <!-- End -->  
+  
+</head>
+
+<body onload="startTime()">
+<!-- Start Navbar -->
+<nav class="navbar-fixed-top navbar-inverse container-fluid" role="navigation">  
+	<div id="navbar_row_1" class="row">
+		<div id="navbar_time" class="col-xs-2"> 
+			<span class="glyphicon glyphicon-time"></span> <a id="time"> </a> <span>IST</span>
+		</div>
+		<div class="col-xs-2">
+			 <img src="images/logo.png" class="navbar_logo_img">
+		</div>				
+		<div id="navbar_fa_text" class="col-xs-8" align="right" >			
+			<a href="#"><span class="fa fa-google-plus"></span></a>
+			<a href="#"><span class="fa fa-facebook"></span></a>
+			<a href="#"><span class="fa fa-twitter"></span></a>
+			<a href="#"><span class="fa fa-instagram"></span></a>
+			<a href="#"><span class="fa fa-pinterest-p"></span></a>
+			<a href="#"><span class="fa fa-flickr"></span></a>
+			<a href="#"><span class="fa fa-github"></span></a>
+			<a href="#"><span class="fa fa-android"></span></a>			
+			<b>|</b>
+			<div id="languages" class="dropdown">
+			<a data-toggle="dropdown"> <span class="fa fa-language" > </span> Languages <span class="caret"></span> </a>					
+					<ul class="dropdown-menu">
+						<li><a href="#"> English </a></li>
+						<li><a href="#">  हिंदी   </a></li>
+						<li class="disabled"><a href="#"> தமிழ்  </a></li>
+						<li class="disabled"><a href="#"> తెలుగు   </a></li>					
+						<li class="disabled"><a href="#"> ಕನ್ನಡ   </a></li>
+						<li class="disabled"><a href="#"> বাঙালি  </a></li>
+						<li class="disabled"><a href="#"> 中文 </a></li>
+						<li class="disabled"><a href="#"> русский </a></li>
+						<li class="disabled"><a href="#"> Español </a></li>
+						<li class="disabled"><a href="#"> 日本語  </a></li>
+						<li class="disabled"><a href="#"> Deutsche </a></li>
+						<li class="disabled"><a href="#"> فارسی </a></li>
+						<li class="disabled"><a href="#"> عربى  </a></li>					
+						<li class="disabled"><a href="#"> français </a></li>										
+					</ul>
+			</div>
+			<b>|</b>
+			<div id="login" class="dropdown">
+			<a data-toggle="dropdown"> <i class="fa fa-sign-in"> </i> Login </a>
+				<form class="dropdown-menu form-content" style="left: -139px;">
+					<h4> Quickly sign in to: </h4>						
+					<a class="btn btn-block btn-social btn-twitter"> <span class="fa fa-twitter"></span> Sign in with Twitter </a>
+					<a class="btn btn-block btn-social btn-facebook"> <span class="fa fa-facebook"></span> Sign in with Facebook </a>
+					<a class="btn btn-block btn-social btn-google"> <span class="fa fa-google"></span> Sign in with Google </a>
+					<p></p>
+					<p align="center"> <b> -Or- </b></p>					
+					<input style="width: 100%;" type="text" name="email" Value=" Yourname@domain.com"/> <br>											
+					<input style="margin-top: 5px; width: 100%;" type="text" name="passwd" value=" Password"/>
+					<a><span style="float:right;"> Forget Password [?]</span></a>	
+					<h1></h1>
+					<span> <input type="checkbox"> Keep me signed in <a>Detail.</a> </span>	
+					<p> </p>
+					<button class="login_button" type="submit" align="left"> Login </button>
+					<p> </p>
+					<p> Don't have an account? <a data-toggle="dropdown" data-target="#create"> Create one now. </a></p>
+				</form>
+			</div>	
+			<a style="color:#ffcc00;"> / </a>
+			<div id="create" class="dropdown">
+			<a data-toggle="dropdown"> <i class="fa fa-user-circle"> </i> Sign Up </a>											
+				<form class="dropdown-menu form-content" style="left: -220px;">
+					<h4> Quickly sign up with: </h4>						
+					<a class="btn btn-block btn-social btn-twitter"> <span class="fa fa-twitter"></span> Connect with Twitter </a>
+					<a class="btn btn-block btn-social btn-facebook"> <span class="fa fa-facebook"></span> Connect with Facebook </a>
+					<a class="btn btn-block btn-social btn-google">	<span class="fa fa-google"></span> Connect with Google </a>
+					<p></p>
+					<p align="center"> <b> -Or- </b></p>						
+					<input type="text" name="fname" Value="First Name"/> <input type="text" name="lname" Value="Last Name"/>
+					<input style="margin-top: 5px; width: 100%;" type="text" name="email" Value="yourname@domain.com"/> <br>
+					<input style="margin-top: 5px; width: 60%;" type="text" name="fname" Value="Country on right flage image"/> 
+					<input style="margin-top: 5px; width: 38.5%;" type="text" name="lname" Value="Zip Code"/> <br>
+					<input style="margin-top: 5px; width: 100%;" type="text" name="passwd" value="Password"/> 
+					<input style="margin-top: 5px; width: 100%;" type="text" name="passwd" value="Retype Password"/> 
+					<p align="right" >[+]</p>
+					<span > <input type="checkbox"/> Keep me signed in <a>Detail.</a></span>
+					<p> <input type="checkbox"/> By clicking Create Account, you agree to our <a>Terms</a> and that you have read our <a>Data Policy</a>, including our <a>Cookie Use</a>.</p>
+					<button class="login_button" type="submit" align="left"> Create Account </button>
+					<p> </p>
+					<p> Already have an account? <a data-toggle="dropdown" data-target="#login"> Login. </a></p>	
+				</form>
+			</div>												
+			<b style="color:white;">&nbsp India </b>
+			<img src="images/in.svg" alt="flag" height="15em" width="22em"/>			
+		</div>
+	</div>
+
+
+	<div id="navbar_row_2" class="row" style="box-shadow: 0 2px 4px 0px;">	
+		<div id="print_date" class="col-lg-1 col-md-1 col-sm-1 col-sx-1"> 
+			<font style="color:white; position: absolute; top: -0.1em; left: 0.4em" size="6"><b id="dt"> </b></font>
+			<font style="color:white; position: absolute; top: 0.2em; left: 5.0em" size="2" id="day"> </font>
+			<font style="color:white; position: absolute; top: 1.4em; left: 5.0em" size="2" id="mnth"> </font>
+		</div>
+
+		<div id="mobileview" class="col-lg-1 col-md-1 col-sm-1 col-sx-1">
+			<img src="images/logo.png" alt="logo" class="thick_navbar_logo_img">
+		</div>	
+		
+		<div class="col-lg-10 col-md-10 col-sm-10 col-sx-10 pull-right">
+			<div class="navbar-collapse collapse navbar-ex1-collapse" >
+				<ul id="menu" class="nav navbar-nav navbar-right" >			
+					<li><a href="#" ><b>Work<span style="color:#ffcc00;font-weight:bold">+</span></b></a>						
+						<div class="dropdown_work_menu">														
+							<div class="tab">
+								<button class="tablinks" onclick="tabmenu(event, 'wedo')" id="defaultOpen">We Do!</button>
+								<button class="tablinks" onclick="tabmenu(event, 'lab')">Laboratory</button>
+								<button class="tablinks" onclick="tabmenu(event, 'village')">Villages's</button>
+							</div>
+								
+							<div id="wedo" class="tabcontent">								
+								<div class="sidetab">
+									<button class="sidetablinks" onmouseover="sidemenu(event, 'ongoing')" >Ongoing work</button>
+									<button class="sidetablinks" onmouseover="sidemenu(event, 'upcomming')">Upcomming</button>
+									<button class="sidetablinks" onmouseover="sidemenu(event, 'madeout')">Madeout</button>
+									<button class="sidetablinks" onmouseover="sidemenu(event, 'whitepaper')">White Paper</button>
+									<button class="sidetablinks" onmouseover="sidemenu(event, 'business')">Let's Business</button>
+									<button class="sidetablinks" onmouseover="sidemenu(event, 'charity')">Charity</button>
+									<button class="sidetablinks" onmouseover="sidemenu(event, 'education')">Education Stuff</button>
+								</div>
+
+								<div id="ongoing" class="sidetabcontent">									
+									<!-- style="display: block; background-image: url(images/work_menu/ongoing2.jpg); background-repeat: no-repeat; background-position: right bottom;" -->
+									<h4 style="margin: 0px; color:#ffcc00;" >Welcome!</h4>
+									<hr style="margin: 6px 0px 2px 0px;">
+									<p>Presently we're working on these projects, please have your insights on them:</p>									
+									
+									<div class="col-lg-6" style="padding: 0px 0px 0px 0px; margin: -10px 0px 0px 0px; text-align: center;">
+										<img src="posts/ongoing/ongoing_demo.jpg" alt="logo" style="box-shadow: 0 2px 6px 1px; width:210px; height: 130px;  border-radius: 2px; padding: 5px; margin: 15px;">
+										<a> <b>Project-1:</b> Wall Painting In aligarh ramghat of Drawing in Uttar Pradesh.</a>
+									</div>
+									
+									<div class="col-lg-6" style="padding: 0px 0px 0px 0px; margin: -10px 0px 0px 0px; text-align: center;">
+										<img src="posts/ongoing/clean_india.jpg" alt="logo" style="box-shadow: 0 2px 6px 1px; width:210px; height: 130px;  border-radius: 2px; padding: 5px; margin: 15px;">
+										<a> <b>Project-2:</b> clean india safe india this the su Detail of content to present.</a>										
+									</div>
+									
+									
+								</div>
+									
+								<div id="upcomming" class="sidetabcontent" style="display: block; background-image: url(images/work_menu/ongoing2.jpg); background-repeat: no-repeat; background-position: right bottom;">	
+									<h4 style="margin: 0px; color:#ffcc00;" >Our Upcoming List of Projects and Idea's</h4>
+									<hr style="margin: 6px 0px 2px 0px;">
+						
+									<ul type="square" style="padding-left: 20px;">
+										<li style="padding: 5px 0px 5px 0px;"> Creativity on junck place like on railway tracks and there bad equipments Hello this is the test information <button type="button" class="btn btn btn-xs">Click to Apply</button></li> 
+										<li style="padding-bottom: 5px;"> Painting, tree plantati this is the Test Clean india, wall painting, tree plantation for specific location, creativity on junck place like on railway tracks <button type="button" class="btn btn btn-xs">Click to Apply</button></li>
+										<li>Clean india, wall painting, tree plantation for specific location, creativity on junck place like on railway tracks and there bad equipments tester of the year  <button type="button" class="btn btn btn-xs">Click to Apply</button></li>																			
+										
+										<button style="margin-top: 20px;" type="button" class="btn btn-info btn-sm">Click Here to know All Projects <i class="fa fa-long-arrow-right"></i> </button>
+									</ul>
+									
+									
+
+								</div>
+									
+								<div id="madeout" class="sidetabcontent">
+									<h4 style="margin: 0px; color:#ffcc00;" >Recently Complete Project's</h4>
+									<hr style="margin: 6px 0px 2px 0px;">
+									
+									<div class="row">
+										<div class="col-lg-6" >
+											<img src="posts/ongoing/ongoing_demo.jpg" alt="logo" style="box-shadow: 0 2px 6px 1px; width:225px; height: 120px; border-radius: 2px; padding: 2px; margin: 8px;">
+											<a href="#"><div class="text-block"> 
+												<h4>Nature <br> Nature Hello <br> What a beautiful sunrise</h4>																							
+											</div></a>
+										</div>
+										
+										<div  class="col-lg-6" >											
+											<img src="posts/ongoing/clean_india.jpg" alt="logo" style="box-shadow: 0 2px 6px 1px; width:225px; height: 120px; border-radius: 2px; padding: 2px; margin: 8px;">
+											<a href="#"><div class="text-block"> 
+												<h4>Computer <br> Most <br> Useful Machine </h4>
+											</div></a>
+										</div>
+									</div>
+									
+									<div class="row">
+										<div  class="col-lg-6" >
+											<img src="posts/ongoing/clean_india.jpg" alt="logo" style="box-shadow: 0 2px 6px 1px; width:225px; height: 120px; border-radius: 2px; padding: 2px; margin: 8px;">
+											<a href="#"><div class="text-block"> 												
+												<h4>On of The <br> Most Cloud <br> A Very New Technology</h4>
+											</div></a>
+										</div>
+										
+										<div  class="col-lg-6">											
+											<p style="padding: 2px; margin: 8px;" >What a beautiful sunrise wood stick trucks with this is one of the most almost the great.
+											<button style="margin-top: 10px; float: right;" type="button" class="btn btn-info btn-sm">All Projects Detail <i class="fa fa-long-arrow-right"></i> </button>
+											</p>
+										</div>
+									</div>
+
+									
+								</div>
+									
+								<div id="whitepaper" class="sidetabcontent" style="display: block; background-image: url(images/work_menu/whitepaper.jpg); background-repeat: no-repeat; background-position: right bottom;">
+									<h4 style="margin: 0px; color:#ffcc00;" > White Papers Research Library</h4>
+									<hr style="margin: 6px 0px 2px 0px;">
+									
+									<div class="col-lg-12" style="padding: 0px; margin-top: 10px;" >											
+										<p><strong>(Environmental Change Statistic)</strong></p>
+										<p>A white paper is an authoritative report or guide that informs readers concisely about a complex issue and presents the issuing body's philosophy on the matter. It is meant to help readers understand an issue, solve a problem.</p>										
+										<p><a href="#"><strong> Download PDF File </strong> <img src="images/work_menu/pdfIcon.png" alt="PDF Icon" style="width:22px;height:22px;"></a></p>
+										<button style="margin-top: 30px;" type="button" class="btn btn-info btn-sm">Click to See All Research Paper's</button>
+									</div>
+								</div>
+									
+								<div id="business" class="sidetabcontent" style="display: block; background-image: url(images/work_menu/business_icon.jpg); background-repeat: no-repeat; background-position: right bottom;">																		
+									<h4 style="margin: 0px; color:#ffcc00;" > Let's Have Business Together</h4>
+									<hr style="margin: 6px 0px 2px 0px;">
+
+								</div>
+									
+								<div id="charity" class="sidetabcontent" style="display: block; background-image: url(images/work_menu/charity.jpg); background-repeat: no-repeat; background-position: right bottom;">									
+									<h4 style="margin: 0px; color:#ffcc00;" > Giving is the best therapy! </h4>
+									<hr style="margin: 6px 0px 2px 0px;">
+									
+									
+								</div>
+
+								<div id="education" class="sidetabcontent" style="display: block; background-image: url(images/work_menu/ignou.jpg); background-repeat: no-repeat; background-position: right bottom;">									
+									<h4 style="margin: 0px; color:#ffcc00;" > Stuff for Distance Learning Students</h4>
+									<hr style="margin: 6px 0px 2px 0px;">
+								</div>								
+																
+							</div>
+								
+							<div id="lab" class="tabcontent">
+								<div class="sidetab">
+									<button class="sidetablinks" onmouseover="sidemenu(event, 'woodwork')">Wood Work</button>
+									<button class="sidetablinks" onmouseover="sidemenu(event, 'claywork')">Clay Work</button>
+									<button class="sidetablinks" onmouseover="sidemenu(event, 'agriculture')">Agriculture</button>
+									<button class="sidetablinks" onmouseover="sidemenu(event, 'electronic')">Electronic</button>
+									<button class="sidetablinks" onmouseover="sidemenu(event, 'automobile')">Automobile</button>									
+									<button class="sidetablinks" onmouseover="sidemenu(event, 'energy')">Free Energy</button>
+									<button class="sidetablinks" onmouseover="sidemenu(event, 'construction')">Construction</button>
+									<button class="sidetablinks" onmouseover="sidemenu(event, 'khurapati')">Khurapati</button>									
+								</div>
+									
+								<div id="woodwork" class="sidetabcontent" style="display: block;">
+									<h4 style="margin: 0px; color:#ffcc00;" > Wood Work</h4>
+									<hr style="margin: 6px 0px 2px 0px;">
+									<p>furniture, creativity, wood stick trucks with chappaal tyres, make some product like smoking pipe wood and sale on amazon.</p>
+								</div>
+									
+								<div id="claywork" class="sidetabcontent">
+									<h4 style="margin: 0px; color:#ffcc00;" > Clay Work</h4>
+									<hr style="margin: 6px 0px 2px 0px;">
+									<p> Soil Utainsales, clay work clean india.</p> 
+								</div>
+									
+								<div id="agriculture" class="sidetabcontent">
+									<h4 style="margin: 0px; color:#ffcc00;" > Agriculture</h4>
+									<hr style="margin: 6px 0px 2px 0px;">
+									<p>Agriculture Tokyo is the capital of Japan.</p>
+								</div>
+									
+								<div id="electronic" class="sidetabcontent">									
+									<h4 style="margin: 0px; color:#ffcc00;" > Electronic</h4>
+									<hr style="margin: 6px 0px 2px 0px;">
+									<p>built RC boat, plan, etc.</p>
+								</div>
+									
+								<div id="automobile" class="sidetabcontent">	
+									<h4 style="margin: 0px; color:#ffcc00;" > Automobile</h4>
+									<hr style="margin: 6px 0px 2px 0px;">
+									<p>Modified Motorbike, Jeeps, tractor etc. Big Picture.</p>
+								</div>
+									
+								<div id="energy" class="sidetabcontent">
+									<h4 style="margin: 0px; color:#ffcc00;" > Free Energy</h4>
+									<hr style="margin: 6px 0px 2px 0px;">
+									<p>Free energy invent all diff type of energy and find the diff way of implement and encourage.</p>
+								</div>
+								
+								<div id="construction" class="sidetabcontent">
+									<h4 style="margin: 0px; color:#ffcc00;" > Construction</h4>
+									<hr style="margin: 6px 0px 2px 0px;">
+									<p> Construction Laboratory and refer a link to House reltal web site..the diff way of implement and encourage.</p>
+								</div>
+								
+								<div id="khurapati" class="sidetabcontent">
+									<h4 style="margin: 0px; color:#ffcc00;" > Khurapati</h4>
+									<hr style="margin: 6px 0px 2px 0px;">
+									<p>Khurapati Expriment just expriment.</p>
+								</div>
+							</div>
+								
+							<div id="village" class="tabcontent">
+								<div class="sidetab" >
+									<button class="sidetablinks" onmouseover="sidemenu(event, 'selfindepend')">Freelance Village </button>
+									<button class="sidetablinks" onmouseover="sidemenu(event, 'treeplant')">Trees plantation</button>
+									<button class="sidetablinks" onmouseover="sidemenu(event, 'reservoir')">Reservoir</button>
+									<button class="sidetablinks" onmouseover="sidemenu(event, 'crops')">Modern farming</button>
+									<button class="sidetablinks" onmouseover="sidemenu(event, 'machintechno')">Agriculture</button>
+									<button class="sidetablinks" onmouseover="sidemenu(event, 'housedesign')">House Design</button>
+									<button class="sidetablinks" onmouseover="sidemenu(event, 'educatefarm')">Educate Farmer</button>
+									<button class="sidetablinks" onmouseover="sidemenu(event, 'booktour')">Book A Tour</button>
+								</div>
+									
+								<div id="selfindepend" class="sidetabcontent" style="display: block;">
+									<h4 style="margin: 0px; color:#ffcc00;" > My Self Independent Villages</h4>
+									<hr style="margin: 6px 0px 2px 0px;">
+									<p>Self Independent [A complete information about specific village in terms of population, economy.</p>
+								</div>
+									
+								<div id="treeplant" class="sidetabcontent">	
+									<h4 style="margin: 0px; color:#ffcc00;" > Trees Plantation</h4>
+									<hr style="margin: 6px 0px 2px 0px;">
+									<p> Soil Utainsales, clay work clean india.</p> 
+								</div>
+									
+								<div id="reservoir" class="sidetabcontent">	
+									<h4 style="margin: 0px; color:#ffcc00;" > Reservoir Improvement </h4>
+									<hr style="margin: 6px 0px 2px 0px;">
+									<p>Agriculture Tokyo is the capital of Japan.</p>
+								</div>
+									
+								<div id="crops" class="sidetabcontent">	
+									<h4 style="margin: 0px; color:#ffcc00;" > Modern Farming</h4>
+									<hr style="margin: 6px 0px 2px 0px;">
+									<p>built RC boat, plan, etc.</p>
+								</div>
+									
+								<div id="machintechno" class="sidetabcontent">
+									<h4 style="margin: 0px; color:#ffcc00;" > Machines and Technologies</h4>
+									<hr style="margin: 6px 0px 2px 0px;">
+									<p> Machines & Technology Modified Motorbike, Jeeps, tractor etc. Big Picture.</p>
+								</div>
+								
+								<div id="housedesign" class="sidetabcontent">
+									<h4 style="margin: 0px; color:#ffcc00;" > New House Structure Design</h4>
+									<hr style="margin: 6px 0px 2px 0px;">
+									<p> HOuse Construction Motorbike, Jeeps, tractor etc. Big Picture.</p>
+								</div>								
+								
+								<div id="educatefarm" class="sidetabcontent" >
+									<h4 style="margin: 0px; color:#ffcc00;" > Educate Farmer to live there life better</h4>
+									<hr style="margin: 6px 0px 2px 0px;">
+									<p>Educate Farmer y invent all diff type of energy and find the diff way of implement and encourage.</p>
+								</div>
+								<div id="booktour" class="sidetabcontent">	
+									<h4 style="margin: 0px; color:#ffcc00;" > Book A Self-Independent Village Tour</h4>
+									<hr style="margin: 6px 0px 2px 0px;">
+									<p>Book A Tour invent all diff type of energy and find the diff way of implement and encourage.</p>
+								</div>
+							</div>
+								
+							<script>
+								// Get the element with id="defaultOpen" and click on it
+								document.getElementById("defaultOpen").click();
+							</script>
+						</div>
+					</li>
+
+					<li><a href="#"><b>WebLogs<span style="color:#ffcc00;font-weight:bold">+</span></b></a>
+						<div class="dropdown_weblog_menu" style="overflow: hidden;">														
+							<div class="col-sm-4" style="padding:0px; margin-top:-5px;">																	
+								<a href="#"> <i class="weblog_img_shadow fa fa-star-half-o fa-lg " aria-hidden="true"  ></i> Product Reviews</a>
+								<a href="#"> <i class="weblog_img_shadow fa fa-flask fa-lg " aria-hidden="true" ></i> Science & Technology</a>
+								<a href="#"> <i class="weblog_img_shadow fa fa-bug fa-lg" aria-hidden="true" ></i> FaultSpot Bug</a>
+								<a href="#"><i class="weblog_img_shadow fa fa-gears " aria-hidden="true" ></i> Tips & Tricks</a>								
+								<a href="#"><i class="weblog_img_shadow fa fa-universal-access fa-lg" aria-hidden="true" ></i> Sprituality</a>
+								<a href="#"><i class="weblog_img_shadow fa fa-pencil-square-o " aria-hidden="true" ></i> Lyric & Subtitle</a>
+							</div>
+							<div class="col-sm-4" style="padding:0px; margin-top:-5px;">
+								<a href="#"><i class="weblog_img_shadow fa fa-group fa-lg" aria-hidden="true" ></i> People Planet</a>
+								<a href="#"><i class="weblog_img_shadow fa fa-umbrella fa-lg" aria-hidden="true" ></i> Bizarre</a>
+								<a href="#"><i class="weblog_img_shadow fa fa-pagelines fa-lg" aria-hidden="true" ></i> Farm & Agriculture</a>
+								<a href="#"><i class="weblog_img_shadow fa fa-cutlery fa-lg" aria-hidden="true" ></i>  DesiFood</a>
+								<a href="#"><i class="weblog_img_shadow fa fa-optin-monster " aria-hidden="true" ></i> Cartoons Mimic</a>
+								<a href="#"><i class="weblog_img_shadow fa fa-university " aria-hidden="true" ></i> History & Culture</a>
+							</div>
+							<div class="col-sm-4" style="padding:0px; margin-top:-5px;">									
+								<a href="#"><i class="weblog_img_shadow fa fa-snowflake-o fa-lg" aria-hidden="true" ></i> How to</a>
+								<a href="#"><i class="weblog_img_shadow fa fa-tree fa-lg" aria-hidden="true" ></i> Animal & Nature</a>
+								<a href="#"><i class="weblog_img_shadow fa fa-comments-o fa-lg" aria-hidden="true" ></i> Chat Storyline</a>
+								<a href="#"><i class="weblog_img_shadow fa fa-map-signs fa-lg" aria-hidden="true" ></i> Travel & Adventure</a>
+								<a href="#"><i class="weblog_img_shadow fa fa-google-wallet" aria-hidden="true" ></i> Quiz</a>
+								<a href="#"><i class="weblog_img_shadow fa fa-futbol-o" aria-hidden="true" ></i> Health & Fitness</a>								
+							</div>
+							
+							<div class="rows" style="padding:0px;">
+								<div class="col-sm-12" style="padding:0px; padding-top:5px; ">								
+									<h4 style="float: left; border-left: 3px solid #ffcc00;">Featured blog's &nbsp </h4><hr style="position: relative; top: 0em;">
+								</div>
+								<div class="col-sm-4" style="padding:0px; margin-top:-10px;">																	
+									<a href="#"><i class="weblog_img_shadow fa fa-ravelry fa-lg" aria-hidden="true" ></i> Story Timeline</a>	
+								</div>
+								<div class="col-sm-4" style="padding:0px; margin-top:-10px;">																										
+									<a href="#"><i class="weblog_img_shadow fa fa-newspaper-o fa-lg" aria-hidden="true" ></i> Uncovered News</a>
+								</div>
+								<div class="col-sm-4" style="padding:0px; margin-top:-10px;">																	
+									<a href="#"><i class="weblog_img_shadow fa fa-user-o fa-lg" aria-hidden="true" ></i> Rajesh<u><b>e</b></u>dit</a>
+								</div>									
+								
+							</div>
+						</div>
+					</li>
+					<li><a href="#"><b>Infotainment<span style="color:#ffcc00;font-weight:bold">+</span></b></a>
+						<div class="dropdown_youtube_menu">
+							<div class="col-sm-12" style="padding:0px; margin-top:-5px;">								
+								<h4 style="float: left; border-left: 3px solid #ffcc00;">YouTube Playlist &nbsp </h4><hr style="position: relative; top: 0em; padding:0px;">							
+							</div>
+							<div class="col-sm-4" style="padding:0px; margin-top:-10px;">																	
+								<a href="#">Agriculture & Farming</a>
+								<a href="#">People Planet </a>
+								<a href="#">Stunt Wheel</a>
+								<a href="#">Dandy Creatures</a>
+							</div>
+							<div class="col-sm-4" style="padding:0px; margin-top:-10px;">																	
+								<a href="#">Research & Invotation</a>
+								<a href="#">Technology</a>
+								<a href="#">Product Review</a>
+								<a href="#" style="color: gray"><b>More...</b></a>
+							</div>
+							<!-- Youtube play buttom code
+							<div class="col-sm-4 video-thumbnail" style="padding:0px;">																								
+								<img src="images/youtube_menu/bird.jpg" alt="logo" style="box-shadow: 0 2px 6px 1px; width:180px; height: 100px; border-radius: 2px;">								
+							</div>
+							-->
+							<div class="col-sm-4" style="padding:3px; padding-bottom: 0px; box-shadow: 0 2px 6px 1px; border-radius: 2px;">		
+								<iframe width="180" height="100" src="https://www.youtube.com/embed/eNbSI9rTYvI?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+							</div>
+							
+							<div class="col-sm-12" style="padding:0px;">								
+								<h4 style="float: left; border-left: 3px solid #ffcc00;" > SoundCloud Music &nbsp </h4><hr style="position: relative; top: 0em; padding:0px;">							
+							</div>
+							<div class="col-sm-6" style="padding:0px; margin-top:5px;">																	
+								<h4 style="border-left: 3px solid #ffcc00; margin:0px;"> Motely</h4>
+								<a href="#">Music Composition</a>
+								<a href="#">Creative Song </a>
+								<a href="#">Debate </a>
+								<a href="#">Recorded Archive</a>
+								<a href="#">Live Talk</a>								
+							</div>
+							<div class="col-sm-6" style="padding:0px; margin-top:5px;">																	
+								<h4 style="border-left: 3px solid #ffcc00; margin:0px;"> Categories</h4>
+								<a href="#">Epic Village rasiya</a>
+								<a href="#">Pranks Calls</a>								
+								<a href="#">DadiMa Ki Khani</a>
+								<a href="#">Podcast</a>
+								<a href="#" style="color: gray"><b>More...</b></a>
+							</div>
+							<div class="col-sm-12" style="padding:0px;">								
+								<h4 style="float: left; border-left: 3px solid #ffcc00;" > Shutterstock Photography &nbsp </h4><hr style="position: relative; top: 0em; padding:0px;">							
+							</div>
+							<div class="col-sm-4" style="padding-left:0px; border-right: 1px solid #aaa;">																									
+								<a href="#">Documentary Pics <span style="font-size: 10px; color:#808080;"><br>Photo shoot experience with detail and location</span> </a>
+								<a href="#">Machine & Vehicles </a>
+								<a href="#">Food & Fruits</a>
+								<a href="#">Festival & Occasion</a>																
+								<a href="#">People Planate</a>
+							</div>
+							<div class="col-sm-4" style="padding-left:10px; ">																	
+								<a href="#">Nature Calling</a>
+								<a href="#">Scatches</a>
+								<a href="#">Art & Painting</a>
+								<a href="#">Plants & Flowers </a>
+								<a href="#">Vintage</a>
+								<a href="#">Inspiration Gallary <span style="font-size: 10px; color:#808080;"><br>Most Viewed Photographs</span> </a>
+							</div>
+							<div class="col-sm-4" style="padding-left:10px; border-left: 1px solid #aaa;">									
+								<a href="#">Animal & Creature</a>
+								<a href="#">Game & Sports</a>
+								<a href="#">Creative Capture <span style="font-size: 10px; color:#808080;"><br>Manual Hand Crafts Work</span> </a>
+								<a href="#">Farms & Field </a>								
+								<a href="#">Graphics & Quotes</a>
+								<a href="#" style="color: gray" ><b>More...</b></a>
+							</div>
+							
+							<div class="col-sm-12" style="padding:0px;">								
+								<h4 style="float: left; border-left: 3px solid #ffcc00;" > Channel's &nbsp </h4><hr style="position: relative; top: 0em; padding:0px;">							
+							</div>
+							
+							<div class="col-sm-4" style="padding:0px; margin-top:-10px;">																	
+								<a href="#">Akhada Games</a>								
+							</div>
+							<div class="col-sm-4" style="padding:0px; margin-top:-10px;">																	
+								<a href="#">CapMedia</a>							
+							</div>
+							<div class="col-sm-4" style="padding:0px;  margin-top:-10px;">																								
+								<a href="#">Otpai</a>
+							</div>
+							
+						</div>					
+					</li>
+
+					<li><a href="#"><b>e-Social<span style="color:#ffcc00;font-weight:bold">+</span></b></a>
+						<div class="dropdown_akhada_menu">
+					</li>
+					
+					<li><a href="#"><b>Craft<span style="color:#ffcc00;font-weight:bold; font-size:10px;"><i>Laboratory</i></span></b></a>
+						<div class="dropdown_photo_menu align_right">
+						
+							<div class="col-sm-12" style="padding:0px; margin-top:-10px;">								
+								<h4 style="float: left; border-left: 3px solid #ffcc00;" > Health & Fitness &nbsp </h4><hr style="position: relative; top: 0em; padding:0px;">													
+								<div class="col-sm-6" style="padding-left:0px; margin-top:-10px;">																	
+									<a href="#">Athlete Stories of India</a>
+									<a href="#">WODs</a>
+									<a href="#">Diet Plan</a>								
+								</div>
+								<div class="col-sm-6" style="padding-left:0px; margin-top:-10px;">																									
+									<a href="#">Tranformation Plan</a>
+									<a href="#">Our Community</a>
+									<a href="#">Affiliates & Foundation</a>
+								</div>
+							</div>
+								
+							<div class="col-sm-12" style="padding:0px; ">								
+								<h4 style="float: left; border-left: 3px solid #ffcc00;" > Updates &nbsp </h4><hr style="position: relative; top: 0em; padding:0px;">							
+								
+								<div class="col-sm-4" style="padding:0px; margin-top:-10px;">																									
+									<a href="#">Sports & Games</a>
+									<a href="#">Akhada <span style="font-size: 10px; color:#808080;">[Get Started]</span></a> 
+								</div>
+								<div class="col-sm-4" style="padding:0px; margin-top:-10px;">																						
+									<a href="#">State Events</a>	
+									<a href="#">Excercise & Demo</a>										
+								</div>
+								<div class="col-sm-4" style="padding:0px; margin-top:-10px;">
+									<a href="#">Results Score </a>
+									<a href="#">Shops <i class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i></a>
+								</div>
+							</div>
+							
+					
+						</div>
+					
+					</li>
+					<li><a href="#"><b>Our Enterprises<span style="color:#ffcc00;font-weight:bold">+</span></b></a>
+						<div class="dropdown_photo_menu align_right">							
+							<div class="col-sm-6" style="padding:0px;">
+								<h4 style="border-left: 3px solid #ffcc00;"> Otpai BRANDS </h4>
+								<a href="#">RegionalFoodFarm.com</a>								
+								<a href="#">Learnfromothers.com</a>
+							</div>
+							<div class="col-sm-6" style="padding:0px;">
+								<h4 style="border-left: 3px solid #ffcc00;"> INDUSTRIES </h4>
+								<a href="#">Village Agriculture</a>								
+								<a href="#">Construction</a>							
+								<a href="#">Athlete Games</a>							
+							</div>
+							
+						</div>
+					</li>
+					<li><a href="#"><b><span style="font-family: Times New Roman, Times, serif; font-size: 23px;">π</span>-Lab.<span style="color:#ffcc00;font-weight:bold">io</span></b></a>
+						<div class="dropdown_ps_menu align_right">							
+							
+							<div class="col-sm-4" style="padding:0px;">
+								<h4 style="border-left: 3px solid #ffcc00;"> PRODUCTS </h4>
+								<a href="#">Typingpot.com</a>
+								<a href="#">County <span style="font-size: 10px; color:#808080;"> Mobile App</span></a>
+								<a href="#">Plugins</a>
+								<a href="#">Tools & Utility</a>
+								<a href="#">Ads Dashboard</a>								
+							</div>
+							<div class="col-sm-4" style="padding:0px;">																	
+								<h4 style="border-left: 3px solid #ffcc00;"> SERVICES </h4>
+								<h5 style="padding-top:10px; margin:0px;"> JanSeva Kendra Services </h5>
+								<a href="#" style="font-size: 12px; color:#808080; margin-top:5px;" >Local Regional Data <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+								<a href="#" style="font-size: 12px; color:#808080; margin:0px;" >User Information <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+								
+								<br>
+								<br>
+								<h5 style="padding-top:10px; margin:0px;"> Training & Certificates </h5>
+								<a href="#" style="font-size: 12px; color:#808080; margin-top:5px;" >Adhara Exam Demo <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+								<a href="#" style="font-size: 12px; color:#808080; margin:0px;" >Other Govt exam <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+								
+									
+								<a href="#">Consulting</a>
+								<a href="#">Data Science </a>
+								<a href="#">Cloud Implementation </a>
+								
+								<a href="#">Digital Marketing</a>
+								<a href="#">Web Development</a>
+								
+								
+							</div>
+							<div class="col-sm-4" style="padding:0px;">									
+								<h4 style="border-left: 3px solid #ffcc00;"> SOLUTION </h4>
+								<a href="#"> Application Migration</a>
+								<a href="#"> Performance Solution</a>
+								<a href="#"> Artificial Intelligence</a>
+								<a href="#"> Cloud & Data Center</a>
+								<a href="#"> IoT Solution</a>
+								<a href="#"> Network Solution</a>
+								<a href="#">Data Warehouse Modernization </a>
+																
+							</div>
+		
+						</div>
+					
+					
+					</li>	  			
+					<li><a href="#"><b>Me.</b></a>
+							<div class="dropdown_me_menu align_right">							
+							
+							<div class="col-sm-12" style="padding:0px;">																	
+								<a href="#">About Otpai</a>
+								<a href="#">Contact Us</a>																
+								<a href="#">Privacy & Policy</a>
+								<a href="#">Terms of Use</a>
+								<a href="#">Cookie Policy</a>
+								<a href="#">Feedback</a>									
+								<a href="#">Career</a>								
+								<a href="#">FAQ</a>								
+							</div>
+		
+						</div>
+					</li>	  								
+					<li><a href="#"><span style="color:white;" class="glyphicon glyphicon-search"></span></a></li>								  			
+					
+				</ul>
+			</div>
+		</div>			
+	</div>
+
+
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+			<span class="sr-only">Toggle navigation</span>					
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>													
+		</button>			
+	</div>	
+	
+</nav>
+<!-- End Navbar -->
+
+
+
+
+
+
+<!-- Start Of First Container-->
+<div class="container-fluid" style="margin: 0px 0px 0px 0px;">
+<!-- Start Slideshow Code -->
+	<div class="featured-content-wrapper" >		
+		<div class="featured-content-posts" >				
+			<div class="post">									
+				<div class="blur">
+					<div class="cover-image" style="background-image: url(./images/slideshow/wall1.jpg);"></div>
+				</div>					
+				<div class="contnr" >
+					<div class="entry-content">
+						<h3 class="content-title">
+							<a href="#">What We Do!</a>
+						</h3>							
+						<div class="slide-navs">
+							<a href="#" class="sprev">Previous</a>
+							<a href="#" class="snext">Next</a>
+						</div>
+			
+						<!-- Post title and categories -->
+						<div class="grid-text">
+							<p style="color: white;"> Well Being, Creative & Social Work!</p>
+							<h3 class="entry-title" style="margin-top:0px;"><a href="#" >We help society to live at better place.</a></h3>
+							<div class="entry-excerpt">
+								<p>The roasting process is what produces the characteristic flavor of coffee by causing the green coffee beans to change in taste. Let's dive back into coffee science, shall we?</p>
+							</div>
+							<p align="right" style="font-size:18px; color: #ffcc00;font-family:Georgia;"> <span style="font-size:30px;">&#10077 </span> We Do! we have to Do! So we can Do! what we want to Do!  <span style="font-size:30px;"> &#10080 </span> </p>
+						</div>
+					</div>
+				</div>
+			</div>
+	
+			<article class="post">				
+				<div class="blur">
+					<div class="cover-image" style="background-image: url(./images/slideshow/wall2.jpg);"></div>
+				</div>		
+				<div class="contnr ">
+					<div class="entry-content">
+						<h3 class="content-title">
+							<a href="#">What We Do!</a>
+						</h3>				
+						<div class="slide-navs">
+							<a href="#" class="sprev">Previous</a>
+							<a href="#" class="snext">Next</a>
+						</div>
+
+						<!-- Post title and categories -->
+						<div class="grid-text">	
+							<p style="color: white;"> Blog, Articles and Content Writing</p>
+							<h3 class="entry-title" style="margin-top:0px;"><a href="#" rel="bookmark">Dig-Dig deep down rightful insights of content.</a></h3>
+							<div class="entry-excerpt">
+								<p>The first woman to cross the American landscape by car was Alice Ramsey with three female passengers in 1909. Ramsey left from Hell’s Gate in Manhattan, New York and traveled 59 days.</p>
+							</div>
+							<p align="right" style="font-size:18px; color: #ffcc00;font-family:Georgia;"> <span style="font-size:30px;">&#10077 </span> Release your Bubble thoughts!  <span style="font-size:30px;"> &#10080 </span> </p>
+						</div><!-- .grid-text -->
+					</div><!-- .entry-content -->
+				</div><!-- .contnr -->
+			</article><!-- .post -->
+	
+			<article class="post">
+				<!-- Get the cover image -->
+				<div class="blur">
+					<div class="cover-image" style="background-image: url(./images/slideshow/wall3.jpg);"></div>
+				</div>		
+				<div class="contnr ">
+					<div class="entry-content">
+						<h3 class="content-title">
+							<a href="#">What We Do!</a>
+						</h3>				
+						<div class="slide-navs">
+							<a href="#" class="sprev">Previous</a>
+							<a href="#" class="snext">Next</a>
+						</div>
+						<!-- Post title and categories -->
+						<div class="grid-text">	
+							<p style="color: white;"> SoundCloud, YouTube Video's </p>
+							<h3 class="entry-title" style="margin-top:0px;"><a href="#" rel="bookmark">Motions of expressions alive inside digital media.</a></h3>
+							<div class="entry-excerpt">
+								<p>The Helix Nebula is a large planetary nebula located in the constellation Aquarius. This object is one of the closest to the Earth of all the bright planetary nebulae.</p>
+							</div>
+							<p align="right" style="font-size:18px; color: #ffcc00;font-family:Georgia;"> <span style="font-size:30px;">&#10077 </span> Make easy! Think easy! Hard thing possible.  <span style="font-size:30px;"> &#10080 </span> </p>
+						</div><!-- .grid-text -->
+					</div><!-- .entry-content -->
+				</div><!-- .contnr -->
+			</article><!-- .post -->
+	
+			<article class="post">
+				<!-- Get the cover image -->
+				<div class="blur">
+					<div class="cover-image" style="background-image: url(./images/slideshow/wall4.jpg);"></div>
+				</div>		
+				<div class="contnr clear">
+					<div class="entry-content">
+						<h3 class="content-title">
+							<a href="#">What We Do!</a>
+						</h3>				
+						<div class="slide-navs">
+							<a href="#" class="sprev">Previous</a>
+							<a href="#" class="snext">Next</a>
+						</div>
+
+						<!-- Post title and categories -->
+						<div class="grid-text">	
+							<p style="color: white;"> Sports, CrossFit Games </p>
+							<h3 class="entry-title" style="margin-top:0px;"><a href="#" rel="bookmark">Eat well keep workout short and intance.</a></h3>							
+							<div class="entry-excerpt">
+								<p>Fruits are the means by which angiosperms disseminate seeds. Edible fruits, in particular, have propagated with the movements of humans and animals in a symbiotic relationship.</p>
+							</div>
+							<p align="right" style="font-size:18px; color: #ffcc00;font-family:Georgia;"> <span style="font-size:30px;">&#10077 </span> Life is all about Health, Wealth, Love and Happiness!  <span style="font-size:30px;"> &#10080 </span> </p>
+						</div><!-- .grid-text -->
+					</div><!-- .entry-content -->
+				</div><!-- .contnr -->
+			</article><!-- .post -->
+
+			<article class="post">				
+				<div class="blur">
+					<div class="cover-image" style="background-image: url(./images/slideshow/wall5.jpg);"></div>
+				</div>		
+				<div class="contnr clear">
+					<div class="entry-content">
+						<h3 class="content-title">
+							<a href="#">What We Do!</a>
+						</h3>				
+						<div class="slide-navs">
+							<a href="#" class="sprev">Previous</a>
+							<a href="#" class="snext">Next</a>
+						</div>
+						<!-- Post title and categories -->
+						<div class="grid-text">
+							<p style="color: white;"> Flickr, Photography </p>
+							<h3 class="entry-title" style="margin-top:0px;"><a href="#" rel="bookmark">Capture moments those are impossible to reproduce.</a></h3>
+							<div class="entry-excerpt">
+								<p>Fruits are the means by which angiosperms dissehich angiosperms disseminahich angiosperms disseminaminate seeds. Edible fruits, in particular, have propagated with the movements.</p>
+							</div>
+							<p align="right" style="font-size:18px; color: #ffcc00;font-family:Georgia;"> <span style="font-size:30px;">&#10077 </span> Practice makes man perfect, Experience make man confident!  <span style="font-size:30px;"> &#10080 </span> </p>
+						</div><!-- .grid-text -->
+					</div><!-- .entry-content -->
+				</div><!-- .contnr -->
+			</article><!-- .post -->
+
+			<article class="post">				
+				<div class="blur">
+					<div class="cover-image" style="background-image: url(./images/slideshow/wall6.jpg);"></div>
+				</div>		
+				<div class="contnr clear">
+					<div class="entry-content">
+						<h3 class="content-title">
+							<a href="#">What We Do!</a>
+						</h3>				
+						<div class="slide-navs">
+							<a href="#" class="sprev">Previous</a>
+							<a href="#" class="snext">Next</a>
+						</div>
+						<!-- Post title and categories -->
+						<div class="grid-text">
+							<p style="color: white;"> Information Technology, Cloud </p>
+							<h3 class="entry-title" style="margin-top:0px;"><a href="#" rel="bookmark"> Let's Bring IT around to make fruitful businesses.</a></h3>
+							<div class="entry-excerpt">
+								<p>Fruits are the means by which angiosperms dissehich angiosperms disseminahich angiosperms disseminaminate seeds. Edible fruits, in particular, have propagated with the movements.</p>
+							</div>
+							<p align="right" style="font-size:18px; color: #ffcc00;font-family:Georgia;"> <span style="font-size:30px;">&#10077 </span> World is change by Examples! not by Opinion.  <span style="font-size:30px;"> &#10080 </span> </p>
+						</div><!-- .grid-text -->
+					</div><!-- .entry-content -->
+				</div><!-- .contnr -->
+			</article><!-- .post -->			
+		</div>
+		<a href="#" class="rslides1_nav sprev">Previous</a>
+		<a href="#" class="rslides1_nav snext">Next</a>
+		<a href="#" class="rslides1_nav sprev">Previous</a>
+		<a href="#" class="rslides1_nav snext">Next</a>				
+	</div>		
+	<script type="text/javascript" src="./js/slide_resource2.js"></script>
+<!-- End Slideshow Code -->
+</div>
+<!-- End Of First Container-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Start Of Second Container-->
+<div class="container-fluid" style="margin: 0px 70px 0px 70px;">	
+
+<!-- Start Trending Post Code -->
+<div class="row">		
+	<div class="col-sm-12">	
+		<h2 style="float: left;">Trending Post's</h2><hr style="position: relative; top: 1.3em;">
+	</div>		
+</div>
+
+<div class="row" >
+		<div class="col-sm-8" style="max-height: 250px; overflow: hidden;">		
+			<img src="posts/post0.jpg" style="width: 100%; z-index: -1; position: absolute;">				
+			<br>
+			<h2 style="background-color:black; display: inline; color:white; opacity: 0.8;"> 
+			Hello Test
+			Information of the Year <br>
+			One of the Best <br>
+			what Elese you everything <br>			
+			Background<br>
+			Reaching the victory <br>
+			All Done!<br>
+			<br>
+			</h2>			
+			<div style="color: white; position: absolute; top:0px; right: 20px;">
+				<h5> <i class="fa fa-clock-o fa-lg" aria-hidden="true"> January 26, 2018 | 05:30 AM </i> <h5>				
+			</div>
+			
+			<div style="color: white; position: absolute; bottom:0px; right: 20px;">
+				<h5> <i class="fa fa-eye fa-lg" aria-hidden="true"> 712</i> <i class="fa fa-comments-o fa-lg" aria-hidden="true"> 23</i> <i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"> 5</i> <i class="fa fa-share-alt fa-lg" aria-hidden="true"> </i><h5>				
+			</div>
+			
+			<div style="color: white; position: absolute; bottom:0px; left: 30px;">
+				<h5> <i class="fa fa-user fa-lg" aria-hidden="true"> By Rajesh Chaudhary</i> <h5>				
+			</div>
+			
+		</div>
+		<div class="col-sm-4" style="max-height: 250px; overflow: hidden;  margin-left: -10px ">		
+			<img src="posts/post3.jpg" style="width:100%; z-index: -1; position: absolute; padding-right: 20px">
+			<br>
+			<h2 style="background-color:white; display: inline; color:black; opacity: 0.8;"> 
+			Hello Test
+			Information of the Year <br>
+			One of the Best <br>
+			what Elese you everything <br>			
+			Background<br>
+			<br>
+			<br></h2>
+			
+			
+		</div>
+	
+	
+</div>
+
+<div class="row" style="margin-top: 5px;">			
+		<div class="col-sm-4" style="max-height: 250px; overflow: hidden;"> 
+			<img src="posts/post1.jpg" style="width:100%; z-index: -1; position: absolute;">
+			<br>
+			<h2 style="background-color:white; display: inline; color:black; opacity: 0.8;"> 
+			Hello Test
+			Information of the Year <br>
+			One of the Best <br>
+			what Elese you everything <br>			
+			Background<br>
+			<br>
+			<br></h2>
+		</div>
+		
+		<div class="col-sm-5" style="max-height: 250px; overflow: hidden; margin-left: -8px"> 
+			<img src="posts/post2.jpg" style="width:100%; z-index: -1; position: absolute; ">
+			<br>
+			<h2 style="background-color:black; display: inline; color:white; opacity: 0.8;"> 
+			Hello Test
+			Information of the Year <br>
+			One of the Best <br>
+			what Elese you everything <br>			
+			Background<br>
+			Reaching the victory <br>
+			All Done!<br>
+			<br>
+			</h2>
+			
+		</div>
+		
+		<div class="col-sm-3" style="max-height: 250px; overflow: hidden; margin-left: -7px">		
+			<img src="posts/post4.jpg" style="width:300%; z-index: -1; position: absolute; ">
+			<br>
+			<h2 style="background-color:white; display: inline; color:black; opacity: 0.8;"> 
+			Hello Test
+			Information of the Year <br>
+			Reaching the victory <br>
+			All Done!<br>
+			<br>
+			<br>
+			</h2>
+			
+		</div>
+		
+</div>
+<!-- End Trending Post Code -->	
+
+
+
+
+
+
+
+
+
+<!-- Start Videos Code -->		
+<div class="row">		
+	<div class="col-sm-12">	
+		<h2 style="float: left;">Videos </h2><hr style="position: relative; top: 1.3em;">		
+	</div>	
+</div>
+
+<div class="row">		
+	<div class="col-sm-7">		
+			<!-- <iframe width="810" height="450" src="https://www.youtube.com/embed/Jy2T3yECNPM" frameborder="0" allowfullscreen></iframe> -->
+			
+			<div class="vid-container">				
+				<iframe width="810" height="456" src="https://www.youtube-nocookie.com/embed/Ncxf0JT0khA" frameborder="0" allowfullscreen></iframe>
+			</div>		
+
+			<!--<img src="images/playdemo.png" style="width:100%; max-height: 500px;">
+			<div class="youtube-player" data-id="VIDEO_ID"> </div> -->
+	</div>
+	
+	<div class="col-sm-5">	
+		<h1 style="color:#ffcc00;">Headline of the Video Example Demo Artical One class!</h1>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,oluptua.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+		<h4>Length: 21 min.</h4>
+		<h4>Download</h4>
+		<h4>Add Playlist</h4>
+	</div>
+	
+</div>
+<br>
+<div class="row">	
+	<div class="col-sm-12">			
+			<div class="vid-list-container">
+	        <div class="vid-list">
+	         	
+ 	            <div class="vid-item" onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/eg6kNoJmzkY?autoplay=1&rel=0&showinfo=0&autohide=1'">
+ 	              <div class="thumb"><img src="http://img.youtube.com/vi/eg6kNoJmzkY/0.jpg"></div>
+ 	              <div class="desc">Jessica Hernandez & the Deltas - Dead Brains</div>
+ 	            </div>
+ 	          
+ 	            <div class="vid-item" onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/_Tz7KROhuAw?autoplay=1&rel=0&showinfo=0&autohide=1'">
+ 	              <div class="thumb"><img src="http://img.youtube.com/vi/_Tz7KROhuAw/0.jpg"></div>
+ 	              <div class="desc">Barbatuques - CD Tum P- Sambalel</div>
+ 	            </div>
+
+ 	            <div class="vid-item" onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/F1f-gn_mG8M?autoplay=1&rel=0&showinfo=0&autohide=1'">
+ 	              <div class="thumb"><img src="http://img.youtube.com/vi/F1f-gn_mG8M/0.jpg"></div>
+ 	              <div class="desc">Eleanor Turner plays Baroque Flamenco</div>
+ 	            </div>
+
+ 	            <div class="vid-item" onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/fB8UTheTR7s?autoplay=1&rel=0&showinfo=0&autohide=1'">
+ 	              <div class="thumb"><img src="http://img.youtube.com/vi/fB8UTheTR7s/0.jpg"></div>
+ 	              <div class="desc">Sleepy Man Banjo Boys: Bluegrass</div>
+ 	            </div>
+
+ 	            <div class="vid-item" onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/0SNhAKyXtC8?autoplay=1&rel=0&showinfo=0&autohide=1'">
+ 	              <div class="thumb"><img src="http://img.youtube.com/vi/0SNhAKyXtC8/0.jpg"></div>
+ 	              <div class="desc">Edmar Castaneda: NPR Music Tiny Desk Concert</div>
+ 	            </div>
+
+ 	            <div class="vid-item" onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/RTHI_uGyfTM?autoplay=1&rel=0&showinfo=0&autohide=1'">
+ 	              <div class="thumb"><img src="http://img.youtube.com/vi/RTHI_uGyfTM/0.jpg"></div>
+ 	              <div class="desc">Winter Harp performs Caravan</div>
+ 	            </div>
+ 	          
+ 	            <div class="vid-item" onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/abQRt6p8T7g?autoplay=1&rel=0&showinfo=0&autohide=1'">
+ 	              <div class="thumb"><img src="http://img.youtube.com/vi/abQRt6p8T7g/0.jpg"></div>
+ 	              <div class="desc">The Avett Brothers Tiny Desk Concert</div>
+ 	            </div>
+
+ 	            <div class="vid-item" onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/fpmN9JorFew?autoplay=1&rel=0&showinfo=0&autohide=1'">
+ 	              <div class="thumb"><img src="http://img.youtube.com/vi/fpmN9JorFew/0.jpg"></div>
+ 	              <div class="desc">Tracy Chapman - Give Me One Reason</div>
+ 	            </div>
+				<div class="vid-item" onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/RTHI_uGyfTM?autoplay=1&rel=0&showinfo=0&autohide=1'">
+ 	              <div class="thumb"><img src="http://img.youtube.com/vi/RTHI_uGyfTM/0.jpg"></div>
+ 	              <div class="desc">Winter Harp performs Caravan</div>
+ 	            </div>
+ 	          
+ 	            <div class="vid-item" onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/abQRt6p8T7g?autoplay=1&rel=0&showinfo=0&autohide=1'">
+ 	              <div class="thumb"><img src="http://img.youtube.com/vi/abQRt6p8T7g/0.jpg"></div>
+ 	              <div class="desc">The Avett Brothers Tiny Desk Concert</div>
+ 	            </div>
+
+ 	            <div class="vid-item" onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/fpmN9JorFew?autoplay=1&rel=0&showinfo=0&autohide=1'">
+ 	              <div class="thumb"><img src="http://img.youtube.com/vi/fpmN9JorFew/0.jpg"></div>
+ 	              <div class="desc">Tracy Chapman - Give Me One Reason</div>
+ 	            </div>
+
+				
+				<div class="vid-item" onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/RTHI_uGyfTM?autoplay=1&rel=0&showinfo=0&autohide=1'">
+ 	              <div class="thumb"><img src="http://img.youtube.com/vi/RTHI_uGyfTM/0.jpg"></div>
+ 	              <div class="desc">Winter Harp performs Caravan</div>
+ 	            </div>
+ 	          
+ 	            <div class="vid-item" onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/abQRt6p8T7g?autoplay=1&rel=0&showinfo=0&autohide=1'">
+ 	              <div class="thumb"><img src="http://img.youtube.com/vi/abQRt6p8T7g/0.jpg"></div>
+ 	              <div class="desc">The Avett Brothers Tiny Desk Concert</div>
+ 	            </div>
+
+ 	            <div class="vid-item" onClick="document.getElementById('vid_frame').src='http://youtube.com/embed/fpmN9JorFew?autoplay=1&rel=0&showinfo=0&autohide=1'">
+ 	              <div class="thumb"><img src="http://img.youtube.com/vi/fpmN9JorFew/0.jpg"></div>
+ 	              <div class="desc">Tracy Chapman - Give Me One Reason</div>
+ 	            </div>
+	 	    </div>
+        </div>
+			
+		<div class="arrows">
+        	<div class="arrow-left"><i class="fa fa-chevron-left fa-lg"></i></div>
+        	<div class="arrow-right"><i class="fa fa-chevron-right fa-lg"></i></div>
+        </div>
+		
+		<script type="text/javascript">
+  		$(document).ready(function () {
+		    $(".arrow-right").bind("click", function (event) {
+		        event.preventDefault();
+		        $(".vid-list-container").stop().animate({
+		            scrollLeft: "+=750"
+		        }, 550);
+		    });
+		    $(".arrow-left").bind("click", function (event) {
+		        event.preventDefault();
+		        $(".vid-list-container").stop().animate({
+		            scrollLeft: "-=750"
+		        }, 550);
+		    });
+		});
+  	</script>		
+</div>
+</div>
+<!-- End Videos Code -->	
+
+
+
+
+
+
+
+<!-- Start Podcast Code -->	
+<div class="row">	
+	<div class="col-sm-12">	
+		<h2 style="float: left;">Podcast & Audio </h2><hr style="position: relative; top: 1.3em;"> 
+	</div>
+</div>
+
+<div class="row" style="max-height: 500px;">	
+	<div class="col-sm-9" >
+		<div class="row">
+			<div class="col-sm-3">
+				<img src="images/podcast.png" style="width:90%; max-height: 220px;">
+			</div>	
+			<div class="col-sm-3">
+				<h3>About </h3>
+				<h5>The advinture of Tin Tin.</h5>
+				<h5>Author: Jon Harry</h5>		
+				<h5>No of Chapter: 5.</h5>
+				<h5>Find on: iTunes, SoundCloud, Gaana.com </h5>
+				<h5>#tags #rocks #pop #life #pinkflyod</h5>				
+			</div>	
+			<div class="col-sm-6">	
+				<h3>Description</h3>
+				<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet  sed diam voluptua. Lorem ipsum dolor sit amet  sed diam voluptua. Lor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptuait amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.... more.</p>
+			</div>	
+		</div>	
+		<div class="row">
+			<div class="col-sm-12">
+				<br>
+				<iframe width="100%" height="300" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/406653&amp;color=ffcc00&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_artwork=false"></iframe>			
+			</div>
+		</div>	
+	</div>		
+	<div class="col-sm-3" >
+		<h3>Popular Podcast</h3>		
+		<div style="max-height: 510px; overflow-y:auto; overflow-x: hidden;">			
+			<div class="row">
+				<div class="col-sm-4"> 
+					<img src="images/imgside1.png">
+				</div>								
+				<div class="col-sm-8">
+					<h4> 50 Shades Of Gray</h4>
+					<h5> Daniel Humphary</h5>
+					<p><i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i>
+					<i class="fa fa-comments-o fa-lg" aria-hidden="true"></i>
+					<i class="fa fa-share-alt fa-lg" aria-hidden="true"></i>					
+					</p>				
+				</div>
+			</div>	
+		
+			<div class="row">
+				<div class="col-sm-4">                
+					<img src="images/imgside2.png">
+				</div>
+				<div class="col-sm-8">
+					<h4> An Otpai person</h4>
+					<h5> Rajesh Chaudhary</h5>
+					<p><i class="fa fa-thumbs-o-up fa-lg" aria-hidden="true"></i>
+					<i class="fa fa-comments-o fa-lg" aria-hidden="true"></i>
+					<i class="fa fa-share-alt fa-lg" aria-hidden="true"></i>					
+					</p>
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-sm-4">                
+					<img src="images/imgside1.png">
+				</div>
+				<div class="col-sm-8">
+					<h4> Shades Of Gray</h4>
+					<h5> Daniel Humphary</h5>
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-sm-4">                
+					<img src="images/imgside2.png">
+				</div>
+				<div class="col-sm-8">
+					<h4> Otpai person</h4>
+					<h5> Chaudhary</h5>
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-sm-4">                
+					<img src="images/imgside1.png">
+				</div>
+				<div class="col-sm-8">
+					<h4> Hello Hello</h4>
+					<h5> Humphary</h5>
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-sm-4">                
+					<img src="images/imgside1.png">
+				</div>
+				<div class="col-sm-8">
+					<h4> Typing Pot</h4>
+					<h5> Daniel Humphary</h5>
+				</div>
+			</div>
+		
+			<div class="row">
+				<div class="col-sm-4">                
+					<img src="images/imgside2.png">
+				</div>
+				<div class="col-sm-8">
+					<h4> Red Chaudhary</h4>
+					<h5> Daniel Humphary</h5>
+				</div>
+			</div>						
+		</div>
+	</div>
+</div>
+<!-- End Podcast Code -->	
+
+
+<!-- Start Photography Code -->	
+<div class="row">	
+	<div class="col-sm-12">	
+		<h2 style="float: left;">Photography </h2><hr style="position: relative; top: 1.3em;">
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-sm-12 freewall_main" style="width:100%; margin:0 auto;">
+		<div id="freewall" class="free-wall" data-min-width="1520" data-total-col="7" data-total-row="4" data-wall-width="1140" data-wall-height="648" >
+			<div class="brick size24" data-position="0-0" data-delay="1" data-height="320" data-width="640" data-state="move" >
+				<span onclick="#"><img src="./firewall/festival.jpg">
+					<div class="title"> Occasions </div>
+				</span>
+			</div>
+
+			<div class="brick size21" data-delay="2" data-height="160" data-width="320" data-state="move">
+				<span onclick="#"><img src="./firewall/beauty-fashion.jpg">
+					<div class="title">Beauty &amp; Fashion </div>
+				</span>
+			</div>
+
+			<div class="brick size11" data-delay="3" data-height="160" data-width="160" data-state="move">
+				<span onclick="#"><img src="./firewall/food-drink.jpg">
+					<div class="title">Food &amp; Drink </div>
+				</span>
+			</div>
+
+			<div class="brick size11" data-delay="4" data-height="160" data-width="160" data-state="move">
+				<span onclick="#"><img src="./firewall/health-fitness.jpg">
+					<div class="title">Health &amp; Fitness </div>
+				</span>
+			</div>
+			
+			<div class="brick size12" data-delay="5" data-height="320" data-width="160" data-state="move">
+				<span onclick="#"><img src="./firewall/couple.jpg">
+					<div class="title"> Couples </div>
+				</span>
+			</div>
+			
+			<div class="brick size11" data-delay="6" data-height="160" data-width="160" data-state="move">
+				<span onclick="#"><img src="./firewall/family.jpg">
+					<div class="title"> Families </div>
+				</span>
+			</div>
+			
+			<div class="brick size22" data-delay="7" data-height="320" data-width="320" data-state="move">
+				<span onclick="#"><img src="./firewall/business-corporate.jpg">
+					<div class="title">Business &amp; Corporate </div>
+				</span>
+			</div>
+
+			<div class="brick size11" data-delay="7" data-height="160" data-width="160" data-state="move">
+				<span onclick="#"><img src="./firewall/adult.jpg">
+					<div class="title"> Adults </div>
+				</span>
+			</div>
+
+			<div class="brick size11" data-delay="13" data-height="160" data-width="160" data-state="move" >
+				<span onclick="#"><img src="./firewall/seniors.jpg">
+					<div class="title"> Seniors </div>
+				</span>
+			</div>
+
+			<div class="brick size11" data-delay="10" data-height="160" data-width="160" data-state="move" >
+				<span onclick="#"><img src="./firewall/children.jpg">
+					<div class="title"> Children </div>
+				</span>
+			</div>
+
+			<div class="brick size21" data-delay="11" data-height="160" data-width="400" data-state="move">
+				<span onclick="#"><img src="./firewall/10.jpg">
+					<div class="title">Fruits </div>
+				</span>
+			</div>
+
+			<div class="brick size21" data-delay="12" data-height="160" data-width="320" data-state="move" >
+				<span onclick="#"><img src="./firewall/shopping.jpg">
+					<div class="title">Shopping </div>
+				</span>
+			</div>
+		</div>
+	  
+		<script type="text/javascript">
+			var colour = [
+			"rgb(142, 68, 173)",
+			"rgb(243, 156, 18)",
+			"rgb(135, 0, 0)",
+			"rgb(211, 84, 0)",
+			"rgb(0, 106, 63)",
+			"rgb(192, 57, 43)",
+			"rgb(39, 174, 96)",
+			"rgb(41, 128, 185)"];
+
+			$(".brick").each(function() {
+				//this.style.backgroundColor =  colour[colour.length * Math.random() << 0];
+			});
+	
+			$(function() {
+				var wall = new Freewall("#freewall");
+				wall.reset({
+					selector: '.brick',
+					animate: true,
+					cellW: 145,
+					cellH: 145,
+					onResize: function() {
+						wall.fitWidth();
+					}
+				});
+				wall.addCustomEvent('onBlockLoad', function(setting){
+					console.log(setting);
+				});
+				wall.fitWidth();
+			});	
+		</script>
+    </div>
+</div>
+
+<!-- End Photography Code -->
+
+
+<!-- Start CrossFit Code -->	
+<div class="row">	
+	<div class="col-sm-12">	
+		<h2 style="float: left;">Athlete Games </h2><hr style="position: relative; top: 1.3em;">
+	</div>
+</div>
+
+<div class="row">	
+	<div class="col-sm-6">			
+		<h4 >Latest Sport Story</h4>
+        <img src="images/crossfit.png" style="width:100%; max-height: 450px; ">	
+		<img src="images/levels.png" style="width:100%; max-height: 450px; ">	
+	</div>
+		
+	<div class="col-sm-6">
+		<div class="row">
+			<div class="col-sm-7">
+				<h4>WOD - Day of week</h4>
+				<p style="border: 2px solid #ffcc00; border-radius: 5px;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy my eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.Lorem ipsum dolor sit amet sit amet, consetetur sadipscing elitr, eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.Lorem ipsum dolor sit amet sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+			</div>		
+			
+			<div class="col-sm-5">
+				<h4>Diet</h4>
+				<p style="border: 2px solid #ffcc00; border-radius: 5px;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet,  dolor sit amet sit amet, consetetur sadipscing elitr, sed diam nonumy  ut labore emy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.Lorem ipsum dolor sit amet sit amet, consetetur sadipscing elitr,t dolore magna aliquyam erat.</p>		
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-sm-12">		
+				<h4>Open Upcomming Events</h4>
+				<p style="border: 2px solid #ffcc00; border-radius: 5px;">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, hello tis is my name koyi is my name koyi  is my name koyi  is my name koyi sed diam voluptua. Lorem ipsum dolor sit amet, am olore magna aliquyam erat, hello tis is my name koyi is my name koyi  is my name koyi  is my name koyi sed diam voluptua. Lorem ipsum dolor sit amet, am volore magna aliquyam erat, hello tis is my name koyi is my name koyi  is my name koyi  is my name koyi sed diam voluptua. </p>		
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End CrossFit Code -->	
+
+
+<!-- Start MyVillage Code -->	
+<div class="row">	
+	<div class="col-sm-12">	
+		<h2 style="float: left;">Village Hasanpur</h2><hr style="position: relative; top: 1.3em;">		
+	</div>
+	
+</div>
+
+<div class="row">
+	<div class="col-sm-12">	
+		<img src="images/myhasanpur.png" style="width:100%; max-height: 600px;">		
+		<br><p> Disclaimer: This section will contain the information about the list of plan and the dash board of village growth and new-2 plans and activity to help and improvment the village echnomocy and like the wood work, milk, crop, invoation etc. </p>
+	</div>	
+</div>
+
+<!-- End MyVillage Code -->
+
+
+
+
+<!-- Start Product & Services Code -->	
+<div class="row">	
+	<div class="col-sm-12">	
+		<h2 style="float: left;">Products & Services</h2><hr style="position: relative; top: 1.3em;">
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-4" align="center">	
+		<img class="myimg" src="images/product.png" style="width:100%; height: 300px;">
+		<p> This section will contain the information about the list of plan and the dash board of village growth and new-2 plans and activity to help and improvment the village echnomocy and like the wood work, milk, crop, invoation etc. </p>
+		<button type="button" class="button" >Visit Demo &#8608; </button>
+	</div>
+	<div class="col-sm-4" align="center">	
+		<img class="myimg" src="images/pd_soft.png" style="width:100%; height: 300px;">
+		<p> This section will contain the information about the list of plan and the dash board of village growth and new-2 plans and activity to help and improvment the village echnomocy and like the wood work, milk, crop, invoation etc. </p>
+		<button type="button" class="button" >Visit Demo &#x21E2;</button>
+	</div>
+	<div class="col-sm-4" align="center">	
+		<img class="myimg" src="images/pd_web.png" style="width:100%; height: 300px;">
+		<p> This section will contain the information about the list of plan and the dash board of village growth and new-2 plans and activity to help and improvment the village echnomocy and like the wood work, milk, crop, invoation etc. </p>
+		<button type="button" class="button" >Visit Demo &#x22B6;</button>
+	</div>
+		
+</div>
+
+<div class="row">
+	<div class="col-sm-12" align="center">	
+		<br><br>
+		<h1> Our Services </h1>
+		<h3> WE OPERATE SO YOU CAN OPERATE</h3>		
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-6" align="center" style="padding: 0px 100px 0px 100px">
+		<span>
+			<img src="images/consulting1.png" style="width:10%; vertical-align: text-bottom;">		
+			<h4 style="font-weight:bold; display:inline-block;">CONSULTING</h4>
+			<h5>Advisory services to help you define your big data strategy, blueprint and roadmap. Branding monotonectally embrace empowered solutins for virtual best practices. Professionally maximize cross-unit collaboration ans idea-sharing...</h5>
+		</span>
+		<hr>
+		<span>
+			<img src="images/digital_markiting.png" style="width:10%; vertical-align: text-bottom;">		
+			<h4 style="font-weight:bold; display:inline-block;">DIGITAL MARKETING</h4>
+			<h5>Advisory services to help you define your big data strategy, blueprint and roadmap. Branding monotonectally embrace empowered solutins for virtual best practices. Professionally maximize cross-unit collaboration ans idea-sharing...</h5>
+		</span>
+		<hr>
+		<span>
+			<img src="images/web_dev.png" style="width:10%; vertical-align: text-bottom;">		
+			<h4 style="font-weight:bold; display:inline-block;">WEB DEVELOPMENT</h4>
+			<h5>Advisory services to help you define your big data strategy, blueprint and roadmap. Branding monotonectally embrace empowered solutins for virtual best practices. Professionally maximize cross-unit collaboration ans idea-sharing...</h5>
+		</span>
+	</div>		
+	<div class="col-sm-6" align="center" style="padding: 0px 100px 0px 100px">				
+		<span>
+			<img src="images/data_science1.png" style="width:10%; vertical-align: text-bottom;">		
+			<h4 style="font-weight:bold; display:inline-block;">DATA SCIENCE</h4>
+			<h5>Advisory services to help you define your big data strategy, blueprint and roadmap. Branding monotonectally embrace empowered solutins for virtual best practices. Professionally maximize cross-unit collaboration ans idea-sharing...</h5>
+		</span>
+		<hr>
+		<span>
+			<img src="images/implementation.png" style="width:10%; vertical-align: text-bottom;">		
+			<h4 style="font-weight:bold; display:inline-block;">IMPLEMENTATION</h4>
+			<h5>Advisory services to help you define your big data strategy, blueprint and roadmap. Branding monotonectally embrace empowered solutins for virtual best practices. Professionally maximize cross-unit collaboration ans idea-sharing...</h5>
+		</span>
+		<hr>
+		<span>
+			<img src="images/data_warehouse.png" style="width:10%; vertical-align: text-bottom;">		
+			<h4 style="font-weight:bold; display:inline-block;">DATA WAREHOUSE MODERNIZATION</h4>
+			<h5>Advisory services to help you define your big data strategy, blueprint and roadmap. Branding monotonectally embrace empowered solutins for virtual best practices. Professionally maximize cross-unit collaboration ans idea-sharing...</h5>
+		</span>
+	</div>
+</div>
+<!-- End Product & Services Code -->
+
+
+<!-- Start Clients Code -->	
+<div class="row">	
+	<div class="col-sm-12">	
+		<br>
+		<hr>		
+	</div>
+</div>
+
+<div class="row">	
+	<div class="col-sm-12" align="center">		
+		<img src="images/client7.jpg" style="width:10%;">
+		<img src="images/ngo.png" style="width:10%;">
+		<img src="images/save_water.png" style="width:10%;">			
+		<img src="images/client6.jpg" style="width:10%;">
+		<img src="images/caduceus1.png" style="width:10%;">
+		<img src="images/client8.jpg" style="width:10%;">
+		<img src="images/save_tree1.jpg" style="width:10%;">
+		<img src="images/client3.jpg" style="width:10%;">		
+		<img src="images/save_electric.jpg" style="width:10%;">
+	</div>
+</div>
+<!-- End Clients Code -->
+
+
+<!-- Start Thank you note  -->
+<div class="row" style="font-family: Calibri;font-size: 13px; line-height: 1">	
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="col-sm-12" style="margin: 0px; line-height: 1">
+		<p>GUYS, MYSELF A TECHIE IN ONE OF IT COMPANY, APART FROM MY PROFESSION LIFE. I'M AN INTERNET FREAK FOR WRITING BLOGS ON TECHNICAL, SOCIAL ACTIVITIES, YOUTUBE VIDEOS ETC. SHARING MY KNOWLEDGE AND EXPERIENCE TO HELP OTHERS. I LOVE TO PLAY WITH FLUTE/DHOLAK, PHOTOGRAPHY, NATURE, TREKKING, BIKE RIDING AND READING NOVELS. I'M VERY FOND OF AND BELIEVE IN SPIRITUALITY, YOGA, AND MEDITATION. GIVE THE SOLUTION OF TECHNICAL ISSUE AND ERRORS. READABLE NOT TO EVERYONE SO THEY CAN THINK TO LIKE THIS WEBSITE AND AUTOMATICALL AND FOLLW ME ON SOCIAL MEDIA A SELF VERY GOOD READABLE NOTE </p> 
+		<p>Disclosure: The Adventure Junkies is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. This means if you click on the link and purchase the item, we will receive an affiliate commission at no extra cost for you. We also use other programs like REI, LeisurePro and others to keep our site independent.</p>
+		<h6 style="float: right;font-family: Chiller; font-size: 30px; "> Thank You! </h6> <hr style="position: relative; top: 1em;">
+	</div>
+</div>
+<!-- End Of Thank you note -->
+</div>
+
+<!-- Start Of Footer -->
+<footer class="footer" >
+        <p align="center"> © 2017<a style="color:gray; text-decoration:none;" href="#"> Otpai.com</a>, All rights reserved.		
+			<small> <a style="color:gray;" href="#">Terms of use</a> | <a style="color:gray;" href="#">Privacy Policy</a>  | <a style="color:gray;" href="#">Disclaimer</a></small> 
+		</p>
+</footer>
+<!-- End Of Footer-->
+
+
+
+
+
+
+
+
+<!-- End Of Second Container-->
+
+
+
+</body>
+
+</html>
